@@ -1,7 +1,5 @@
 # Vetores-Primitivos
 
-# Projeto: Controle de Vetor de Itens
-
 Este projeto implementa um controle básico de um vetor de itens, com operações para adicionar, buscar, atualizar, remover e listar itens. A implementação foi feita utilizando arrays em Java, sem o uso de coleções como `ArrayList` ou outras.
 
 ## Estrutura do Projeto
