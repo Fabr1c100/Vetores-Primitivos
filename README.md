@@ -44,6 +44,7 @@ public void redimensionar(int novoTamanho) {
     }
     listaDeItens = novoVetor;
 }
+```
 
 ### 5.2 - O que acontecerá caso o usuário tente incluir uma quantidade de itens maior do que o tamanho do vetor? Existe algo que possa ser feito para mitigar esse risco?
 
