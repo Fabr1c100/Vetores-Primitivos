@@ -44,3 +44,11 @@ public void redimensionar(int novoTamanho) {
     }
     listaDeItens = novoVetor;
 }
+
+### 5.2 - O que acontecerá caso o usuário tente incluir uma quantidade de itens maior do que o tamanho do vetor? Existe algo que possa ser feito para mitigar esse risco?
+
+**Resposta:** Caso o usuário tente adicionar mais itens do que o vetor suporta, o método `adicionar(Item item)` verificará se ainda há espaço no vetor. Se o vetor estiver cheio, uma mensagem será exibida informando que não é possível adicionar mais itens. Para mitigar esse risco, o código poderia ser aprimorado para redimensionar o vetor automaticamente quando ele atingir sua capacidade máxima, utilizando o método `redimensionar(int novoTamanho)` mencionado anteriormente.
+
+### 5.3 - O que acontecerá caso o usuário tente excluir um item que não existe no vetor?
+
+**Resposta:** Se o usuário tentar excluir um item em um índice inválido (ou seja, fora do intervalo atual de itens armazenados no vetor), o método `remover(int index)` exibirá uma mensagem informando que o índice é inválido e não realizará nenhuma operação. Isso garante que o programa continue funcionando sem lançar exceções ou causar erros inesperados.
