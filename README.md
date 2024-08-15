@@ -1,6 +1,6 @@
 # Vetores-Primitivos
 
-Este projeto implementa um controle básico de um vetor de itens, com operações para adicionar, buscar, atualizar, remover e listar itens. A implementação foi feita utilizando arrays em Java, sem o uso de coleções como `ArrayList` ou outras.
+Este projeto implementa um controle básico de um vetor de itens, com operações para adicionar, buscar, atualizar, remover e listar itens.
 
 ## Estrutura do Projeto
 
@@ -10,12 +10,7 @@ Este projeto implementa um controle básico de um vetor de itens, com operaçõe
 
 ## Como Executar
 
-1. Compile as classes Java utilizando o comando:
-    ```bash
-    javac br/com/exemplo/models/Item.java br/com/exemplo/models/ListaItens.java Main.java
-    ```
-
-2. Execute a classe principal:
+1. Execute a classe principal:
     ```bash
     java Main
     ```
@@ -32,7 +27,7 @@ Este projeto implementa um controle básico de um vetor de itens, com operaçõe
 
 ### 5.1 - Caso seja necessário alterar o tamanho do vetor, como isso pode ser feito? Se o código entregue não suporta essa alteração, liste as melhorias necessárias para que a alteração seja possível.
 
-**Resposta:** Para alterar o tamanho do vetor, seria necessário criar um novo vetor com o novo tamanho desejado, copiar todos os elementos do vetor original para o novo vetor, e então substituir o vetor antigo pelo novo. Isso pode ser feito manualmente dentro da classe `ListaItens`. A seguir está uma sugestão de melhoria:
+**Resposta:** Para alterar o tamanho do vetor, seria necessário criar um novo vetor com o novo tamanho desejado, copiar todos os elementos do vetor original para o novo vetor, e então substituir o vetor antigo pelo novo. Isso pode ser feito dentro da classe `ListaItens`. Exemplo:
 
 Adicionar um método `redimensionar(int novoTamanho)` dentro da classe `ListaItens`:
 
@@ -48,8 +43,8 @@ public void redimensionar(int novoTamanho) {
 
 ### 5.2 - O que acontecerá caso o usuário tente incluir uma quantidade de itens maior do que o tamanho do vetor? Existe algo que possa ser feito para mitigar esse risco?
 
-**Resposta:** Caso o usuário tente adicionar mais itens do que o vetor suporta, o método `adicionar(Item item)` verificará se ainda há espaço no vetor. Se o vetor estiver cheio, uma mensagem será exibida informando que não é possível adicionar mais itens. Para mitigar esse risco, o código poderia ser aprimorado para redimensionar o vetor automaticamente quando ele atingir sua capacidade máxima, utilizando o método `redimensionar(int novoTamanho)` mencionado anteriormente.
+**Resposta:** Caso o usuário tente adicionar mais itens do que o vetor suporta, o método `adicionar(Item item)` verificará se ainda há espaço no vetor. Se o vetor estiver cheio, uma mensagem será exibida informando que não é possível adicionar mais itens. Para mitigar esse risco, o código poderia ser aprimorado para redimensionar o vetor automaticamente quando ele atingir sua capacidade máxima, utilizando o método `redimensionar(int novoTamanho)`.
 
 ### 5.3 - O que acontecerá caso o usuário tente excluir um item que não existe no vetor?
 
-**Resposta:** Se o usuário tentar excluir um item em um índice inválido (ou seja, fora do intervalo atual de itens armazenados no vetor), o método `remover(int index)` exibirá uma mensagem informando que o índice é inválido e não realizará nenhuma operação. Isso garante que o programa continue funcionando sem lançar exceções ou causar erros inesperados.
+**Resposta:** Se o usuário tentar excluir um item em um índice inválido (fora do intervalo atual), o método `remover(int index)` exibirá uma mensagem informando que o índice é inválido e não realizará nenhuma operação.
